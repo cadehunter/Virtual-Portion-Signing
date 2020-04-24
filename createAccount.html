@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+<body>
+
+    <form action="https://quizzing.reliancesoap.com/register.php" method="get">
+       
+        <input oninput="validateForm()" type="text" id="firstNameInput" name="firstName" placeholder="First Name">
+        <input oninput="validateForm()" type="text" id="lastNameInput" name="lastName" placeholder="Last Name">
+        <input oninput="validateForm()" type="email" id="emailInput" name="email" placeholder="Email Address">
+        
+        <select name="district">
+            <option value="Alabama North">Alabama North</option>
+            <option value="Alabama South">Alabama South</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Anaheim">Anaheim</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Canada Atlantic">Canada Atlantic</option>
+            <option value="Canada Central">Canada Central</option>
+            <option value="Canada Pacific">Canada Pacific</option>
+            <option value="Canada Quebec">Canada Quebec</option>
+            <option value="Canada West">Canada West</option>
+            <option value="Central California">Central California</option>
+            <option value="Chicago Central">Chicago Central</option>
+            <option value="Colorado">Colorado</option>
+            <option value="East Ohio">East Ohio</option>
+            <option value="East Tennessee">East Tennessee</option>
+            <option value="Eastern Kentucky">Eastern Kentucky</option>
+            <option value="Eastern Michigan">Eastern Michigan</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii Pacific">Hawaii Pacific</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indianapolis">Indianapolis</option>
+            <option value="Intermountain">Intermountain</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Joplin">Joplin</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kansas City">Kansas City</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Los Angeles">Los Angeles</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Metro New York">Metro New York</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Mid-Atlantic">Mid-Atlantic</option>
+            <option value="MidSouth">MidSouth</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="New England">New England</option>
+            <option value="New Mexico">New Mexico</option>
+            <option value="North Arkansas">North Arkansas</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Central Ohio">North Central Ohio</option>
+            <option value="North/East Texas">North/East Texas</option>
+            <option value="Northeast Oklahoma">Northeast Oklahoma</option>
+            <option value="Northeastern Indiana">Northeastern Indiana</option>
+            <option value="Northern California">Northern California</option>
+            <option value="Northern Michigan">Northern Michigan</option>
+            <option value="Northwest">Northwest</option>
+            <option value="Northwest Indiana">Northwest Indiana</option>
+            <option value="Northwestern Illinois">Northwestern Illinois</option>
+            <option value="Northwestern Ohio">Northwestern Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon Pacific">Oregon Pacific</option>
+            <option value="Philadelphia">Philadelphia</option>
+            <option value="Pittsburgh">Pittsburgh</option>
+            <option value="Prairie Lakes">Prairie Lakes</option>
+            <option value="Rocky Mountain">Rocky Mountain</option>
+            <option value="Sacramento">Sacramento</option>
+            <option value="South Arkansas">South Arkansas</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Central Ohio">South Central Ohio</option>
+            <option value="South Texas">South Texas</option>
+            <option value="Southern California">Southern California</option>
+            <option value="Southern Florida">Southern Florida</option>
+            <option value="Southwest Indiana">Southwest Indiana</option>
+            <option value="Southwest Oklahoma">Southwest Oklahoma</option>
+            <option value="Southwestern Ohio">Southwestern Ohio</option>
+            <option value="Upstate New York">Upstate New York</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington Pacific">Washington Pacific</option>
+            <option value="West Texas">West Texas</option>
+            <option value="West Virginia North">West Virginia North</option>
+            <option value="West Virginia South">West Virginia South</option>
+            <option value="Wisconsin">Wisconsin</option>
+        </select>
+        
+        <input type="radio" name="public" value="0" checked> Public: Anyone can add messages to your portion.
+        <input type="radio" name="public" value="1"> Private: Only people with your personal link can add messages to your profile.
+        
+        <input type="submit" id="submitButton" value="Continue" disabled>
+        
+    </form>
+
+    <script src="scripts/createAccount.js"></script>
+</body>
+
+</html>

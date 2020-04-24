@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <h1>Your Profile</h1>
+    <p class="loadingText">Loading...</p>
+
+    <p class="profilePageFirstName"></p>
+    <p class="profilePageLastName"></p>
+    <p class="profilePageDistrict"></p>
+    <p class="profilePageEmail"></p>
+    <p class="profilePagePersonalLink"></p>
+    <p class="profilePagePrivacyMode"></p>
+
+    <script>
+        window.addEventListener("message", function(e) {
+            console.log(e.data);
+        });
+
+    </script>
+    <iframe src="https://quizzing.reliancesoap.com/userinfo.php" style="display: none;"></iframe>
+
+</body>
+
+</html>

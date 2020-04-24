@@ -62,16 +62,32 @@ if ($login_code_result == $login_code) {
     $ismatch = 0;
 }
 
-//Output for testing
-echo 'exists: ' . $exists . '<br>';
-echo 'ismatch: ' . $ismatch . '<br>';
-echo 'quizzerId: ' . $quizzerId . '<br>';
-echo 'firstName: ' . $firstName . '<br>';
-echo 'lastName: ' . $lastName . '<br>';
-echo 'district: ' . $district . '<br>';
-echo 'public: ' . $public . '<br>';
+?>
+<!DOCTYPE HTML>
+<html>
 
-//Close SQL connection
-mysqli_close($conn);
+<body>
 
+    <script>
+        var event = new CustomEvent("profileInformation", {
+            detail: {
+                exists: "<?php echo json_encode($exists); ?>",
+                isMatch: "<?php echo json_encode($ismatch); ?>",
+                quizzerID: "<?php echo json_encode($quizzerId); ?>",
+                firstName: "<?php echo json_encode($firstName); ?>",
+                lastName: "<?php echo json_encode($lastName); ?>",
+                district: "<?php echo json_encode($district); ?>",
+                privaryMode: "<?php echo json_encode($public); ?>"
+            }
+        })
+        window.parent.document.dispatchEvent(event);
+
+    </script>
+
+</body>
+
+</html>
+<?php
+    //Close SQL connection
+    mysqli_close($conn);
 ?>

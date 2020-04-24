@@ -78,11 +78,20 @@ if ($login_code_result == $login_code) {
             district: "<?php echo json_encode($district); ?>",
             privaryMode: "<?php echo json_encode($public); ?>"
         };
-        window.parent.postMessage(object, "http://cadehunter.github.com");
-        window.parent.postMessage(object, "https://cadehunter.github.com");
+        window.parent.postMessage(object, "http://cadehunter.github.io");
+        window.parent.postMessage(object, "https://cadehunter.github.io");
 
     </script>
-
+<?php
+//Output for testing
+echo 'exists: ' . $exists . '<br>';
+echo 'ismatch: ' . $ismatch . '<br>';
+echo 'quizzerId: ' . $quizzerId . '<br>';
+echo 'firstName: ' . $firstName . '<br>';
+echo 'lastName: ' . $lastName . '<br>';
+echo 'district: ' . $district . '<br>';
+echo 'public: ' . $public . '<br>';
+?>
 </body>
 
 </html>

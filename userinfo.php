@@ -69,18 +69,16 @@ if ($login_code_result == $login_code) {
 <body>
 
     <script>
-        var event = new CustomEvent("profileInformation", {
-            detail: {
-                exists: "<?php echo json_encode($exists); ?>",
-                isMatch: "<?php echo json_encode($ismatch); ?>",
-                quizzerID: "<?php echo json_encode($quizzerId); ?>",
-                firstName: "<?php echo json_encode($firstName); ?>",
-                lastName: "<?php echo json_encode($lastName); ?>",
-                district: "<?php echo json_encode($district); ?>",
-                privaryMode: "<?php echo json_encode($public); ?>"
-            }
-        })
-        window.parent.document.dispatchEvent(event);
+        var object = {
+            exists: "<?php echo json_encode($exists); ?>",
+            isMatch: "<?php echo json_encode($ismatch); ?>",
+            quizzerID: "<?php echo json_encode($quizzerId); ?>",
+            firstName: "<?php echo json_encode($firstName); ?>",
+            lastName: "<?php echo json_encode($lastName); ?>",
+            district: "<?php echo json_encode($district); ?>",
+            privaryMode: "<?php echo json_encode($public); ?>"
+        };
+        window.parent.postMessage(object);
 
     </script>
 

@@ -70,13 +70,13 @@ if ($login_code_result == $login_code) {
 
     <script>
         var object = {
-            exists: "<?php echo json_encode($exists); ?>",
-            isMatch: "<?php echo json_encode($ismatch); ?>",
-            quizzerID: "<?php echo json_encode($quizzerId); ?>",
-            firstName: "<?php echo json_encode($firstName); ?>",
-            lastName: "<?php echo json_encode($lastName); ?>",
-            district: "<?php echo json_encode($district); ?>",
-            privaryMode: "<?php echo json_encode($public); ?>"
+            exists: "<?php echo $exists; ?>",
+            isMatch: "<?php echo $ismatch; ?>",
+            quizzerID: "<?php echo $quizzerId; ?>",
+            firstName: "<?php echo $firstName; ?>",
+            lastName: "<?php echo $lastName; ?>",
+            district: "<?php echo $district; ?>",
+            privaryMode: "<?php echo $public; ?>"
         };
         window.parent.postMessage(object, "http://cadehunter.github.io");
         window.parent.postMessage(object, "https://cadehunter.github.io");

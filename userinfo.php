@@ -78,7 +78,8 @@ if ($login_code_result == $login_code) {
             district: "<?php echo json_encode($district); ?>",
             privaryMode: "<?php echo json_encode($public); ?>"
         };
-        window.parent.postMessage(object);
+        window.parent.postMessage(object, "http://cadehunter.github.com");
+        window.parent.postMessage(object, "https://cadehunter.github.com");
 
     </script>
 

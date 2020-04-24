@@ -11,7 +11,7 @@ $email_sql = "SELECT email FROM Quizzers WHERE email = '$email';";
 $email_db = $conn->query($email_sql);
 $email_row=mysqli_fetch_row($email_db);
 $email_result = $email_row[0];
-if ($email_result == $email) {
+if ($email == $email_result and ! empty($email)) {
     $exists = 1;
 } else {
     $exists = 0;
@@ -24,7 +24,7 @@ $login_code_row=mysqli_fetch_row($login_code_db);
 $login_code_result = $login_code_row[0];
 
 //Check login code
-if ($login_code_result == $login_code) {
+if ($login_code_result == $login_code and ! empty($login_code)) {
     $match = 'They match!';
     $ismatch = 1;
     
